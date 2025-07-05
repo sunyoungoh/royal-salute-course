@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Flipbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="page-flip.min.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #flipbook {
+      width: 90vw;
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="flipbook"></div>
+
+  <script src="page-flip.browser.js"></script>
+  <script>
+    const pageFlip = new St.PageFlip(document.getElementById('flipbook'), {
+      width: 600,
+      height: 800,
+      size: 'stretch',
+      maxShadowOpacity: 0.5,
+      showCover: true,
+      mobileScrollSupport: true
+    });
+
+    pageFlip.loadFromImages([
+      'assets/page1.jpg',
+      'assets/page2.jpg',
+      'assets/page3.jpg'
+      'assets/page4.jpg'
+      'assets/page5.jpg'
+      'assets/page6.jpg'
+      'assets/page7.jpg'
+    ]);
+  </script>
+</body>
+</html>
